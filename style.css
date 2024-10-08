@@ -107,12 +107,12 @@ html, body{
     width: 100%;
     background-image: url(assets/bg-grain.webp);
     background-color:  #f6f5ef;
+    font-size: 100%; /* Root size for scaling with rem/em */
+
 }
 
-
 .navbar {
-  /* background: #000; */
-  margin: 0px 25px;
+  margin:0 2.3% 0 1%; /* Use percentage instead of px */  
   font-family: 'CabinetGrotesk-regular';
   display: flex;
   justify-content: space-between; /* Space between logo and nav items */
@@ -121,7 +121,7 @@ html, body{
 }
 
 .logo img {
-  max-height: 100px; /* Adjust the logo size */
+  max-height: 15vh; /* Adjust the logo size */
 }
 
 .nav-items {
@@ -131,10 +131,10 @@ html, body{
 
 .nav-item {
   position: relative;
-  margin: 0 25px; /* Space between nav items */
+  margin: 0 1.5rem; /* Space between nav items */
   text-decoration: none; /* Remove underline from links */
   color: #333; /* Color for the links */
-  font-size: 25px; /* Font size for nav items */
+  font-size: 1.6rem; /* Font size for nav items */
 }
 
 .nav-item:hover{
@@ -159,11 +159,11 @@ html, body{
 }
 
 .nav-item_button {
-  font-size: 20px;
+  font-size:1.2rem;
   text-decoration: none;
   background-color: #000000;
   color: white; /* Button text color */
-  padding: 10px 20px; /* Button padding */
+  padding: 0.8rem 1.5rem; /* Button padding */
   border-radius: 4px; /* Rounded corners */
   transition: background-color 0.3s; /* Transition effect */
 }
@@ -174,215 +174,189 @@ html, body{
   background-color: #ffe757; /* Darker background on hover */
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-  .navbar {
-      flex-direction: column; /* Stack items on smaller screens */
-      align-items: flex-start; /* Align items to the start */
-  }
-
-  .nav-items {
-      margin-top: 10px; /* Space above nav items */
-  }
-}
-
-
 .hero-text{
-    /* position: relative; */
-    line-height: .9;
+  line-height: 1;
 }
+
 .intro{
-    font-family: 'CabinetGrotesk-Variable';
-    font-size: 50px;
-    display: flex;
-    justify-content: center;
-    color: rgb(124, 124, 124);
-    line-height: 3;
+  font-family: 'CabinetGrotesk-Variable';
+  font-size: 3vw;
+  display: flex;
+  justify-content: center;
+  color: rgb(124, 124, 124);
+  line-height: 2;
 }
 
 .black{
-    font-family: 'CabinetGrotesk-Black';
-    font-size: 225px;
-    display: flex;
-    justify-content: center;
-    
-
+  font-family: 'CabinetGrotesk-Black';
+  font-size: 11vw;
+  display: flex;
+  justify-content: center;
 }
 
 .white{
-    font-family: 'CabinetGrotesk-Black' ;
-    font-size: 200px;
-    display: flex;
-    justify-content: center;
-    -webkit-text-fill-color: #f6f5ef; /* Will override color (regardless of order) */
-    -webkit-text-stroke: 2px rgb(124, 124, 124);
-
-    
+  font-family: 'CabinetGrotesk-Black' ;
+  font-size: 10vw;
+  display: flex;
+  justify-content: center;
+  -webkit-text-fill-color: #f6f5ef; /* Will override color (regardless of order) */
+  -webkit-text-stroke: 1.5px rgb(124, 124, 124);
 }
 .location{
-    /* background: #000; */
-    font-family: 'CabinetGrotesk-medium';
-    font-size: 50px;
-    display: flex;
-    margin-left: 300px;
-    margin-right: 300px;
-    color: rgb(124, 124, 124);
-    line-height: 3;
+  font-family: 'CabinetGrotesk-medium';
+  font-size: 2.5vw;
+  display: flex;
+  margin-left: 6.5vw;
+  color: rgb(124, 124, 124);
+  line-height: 1.5;
 }
-
-
 .myimage{
-    /* background: #000; */
-    height: 95vh;
-    display: block;
-    z-index: 1;
-    position: absolute; 
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%)    
+  z-index: 1;
+  position: absolute; 
+  top: 55%; 
+  left: 50%; 
+  transform: translate(-50%, -50%)    
 }
 
 .myimage img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    mask-image: linear-gradient(to bottom, rgba(0, 0, 0,1) 78.5%, rgba(0, 0, 0, 0) 100%);
- }
+  height: auto;
+  width: 30vw;
+  object-fit: cover;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0,1) 78.5%, rgba(0, 0, 0, 0) 100%);
+}
 .cta-buttons{
-    z-index: 2;
-    position: absolute;
-    bottom: 40px; /* Adjust based on your needs */
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 50px;
+  z-index: 2;
+  position: absolute;
+  bottom: 10px; 
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 2rem;
+}
+.button-1 {
+  font-family: 'CabinetGrotesk-Bold';
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #18181a;
+  color: #f6f5ef;
+  display: inline-block;
+  font-size: 1.5rem;
+  line-height: 15px;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  cursor: pointer;
+  background: #000000;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
- .button-1 {
-    font-family: 'CabinetGrotesk-Bold';
-    position: relative;
-    overflow: hidden;
-    border: 1px solid #18181a;
-    color: #f6f5ef;
-    display: inline-block;
-    font-size: 25px;
-    line-height: 15px;
-    padding: 18px 20px 17px;
-    text-decoration: none;
-    cursor: pointer;
-    background: #000000;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-  }
-  
-  .button-1 span:first-child {
-    position: relative;
-    transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
-    z-index: 10;
-  }
-  
-  .button-1 span:last-child {
-    color: rgb(0, 0, 0);
-    display: block;
-    position: absolute;
-    bottom: 0;
-    transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
-    z-index: 100;
-    opacity: 0;
-    top: 50%;
-    left: 50%;
-    transform: translateY(225%) translateX(-50%);
-    height: 16px;
-    line-height: 18.5px;
-  }
-  
-  .button-1:after {
-    content: "";
-    position: absolute;
-    bottom: -50%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #f6f5ef;
-    transform-origin: bottom center;
-    transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
-    transform: skewY(9.3deg) scaleY(0);
-    z-index: 50;
-  }
-  
-  .button-1:hover:after {
-    transform-origin: bottom center;
-    transform: skewY(9.3deg) scaleY(2);
-  }
-  
-  .button-1:hover span:last-child {
-    transform: translateX(-50%) translateY(-100%);
-    opacity: 1;
-    transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
-  }
+.button-1 span:first-child {
+  position: relative;
+  transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 10;
+}
 
+.button-1 span:last-child {
+  color: rgb(0, 0, 0);
+  display: block;
+  position: absolute;
+  bottom: 0;
+  transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 100;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translateY(225%) translateX(-50%);
+  height: 16px;
+  line-height: 18.5px;
+}
 
-  .button-2 {
-    font-family: 'CabinetGrotesk-Bold';
-    position: relative;
-    overflow: hidden;
-    border: 1px solid #18181a;
-    color: #18181a;
-    display: inline-block;
-    font-size: 25px;
-    line-height: 15px;
-    padding: 18px 20px 17px;
-    text-decoration: none;
-    cursor: pointer;
-    background: #ffffff00;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-  }
-  
-  .button-2 span:first-child {
-    position: relative;
-    transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
-    z-index: 10;
-  }
-  
-  .button-2 span:last-child {
-    color: white;
-    display: block;
-    position: absolute;
-    bottom: 0;
-    transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
-    z-index: 100;
-    opacity: 0;
-    top: 50%;
-    left: 50%;
-    transform: translateY(225%) translateX(-50%);
-    height: 16px;
-    line-height: 18.5px;
-  }
-  
-  .button-2:after {
-    content: "";
-    position: absolute;
-    bottom: -50%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    transform-origin: bottom center;
-    transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
-    transform: skewY(9.3deg) scaleY(0);
-    z-index: 50;
-  }
-  
-  .button-2:hover:after {
-    transform-origin: bottom center;
-    transform: skewY(9.3deg) scaleY(2);
-  }
-  
-  .button-2:hover span:last-child {
-    transform: translateX(-50%) translateY(-100%);
-    opacity: 1;
-    transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
-  }
+.button-1:after {
+  content: "";
+  position: absolute;
+  bottom: -50%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f6f5ef;
+  transform-origin: bottom center;
+  transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  transform: skewY(9.3deg) scaleY(0);
+  z-index: 50;
+}
+
+.button-1:hover:after {
+  transform-origin: bottom center;
+  transform: skewY(9.3deg) scaleY(2);
+}
+
+.button-1:hover span:last-child {
+  transform: translateX(-50%) translateY(-100%);
+  opacity: 1;
+  transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+}
+
+.button-2 {
+  font-family: 'CabinetGrotesk-Bold';
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #18181a;
+  color: #18181a;
+  display: inline-block;
+  font-size: 1.5rem;
+  line-height: 15px;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  cursor: pointer;
+  background: #ffffff00;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-2 span:first-child {
+  position: relative;
+  transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 10;
+}
+
+.button-2 span:last-child {
+  color: white;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 100;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translateY(225%) translateX(-50%);
+  height: 16px;
+  line-height: 18.5px;
+}
+
+.button-2:after {
+  content: "";
+  position: absolute;
+  bottom: -50%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  transform-origin: bottom center;
+  transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  transform: skewY(9.3deg) scaleY(0);
+  z-index: 50;
+}
+
+.button-2:hover:after {
+  transform-origin: bottom center;
+  transform: skewY(9.3deg) scaleY(2);
+}
+
+.button-2:hover span:last-child {
+  transform: translateX(-50%) translateY(-100%);
+  opacity: 1;
+  transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+}
